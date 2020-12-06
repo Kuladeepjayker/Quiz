@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+  <div id="app" class="mt-5 pt-5">
+    <div class="container">
+        <div v-for="(question, index) in questions" :key="question.id">
+            <p>[[index+i]] [[question.question]]</p>
+        </div>
+    </div>
+
+  </div>
+
+  <script>
+    var app = new Vue({
+      delimiters: ['[[', ']]'],
+      el: '#app',
+      data: {
+          message: 'Hello Vue!',
+          course_id : '{{id}}',
+          question : []
+      },
+      methods: {
+          greet: function(name) {
+              console.log('Hello from ' + name + '!')
+          },
+      },
+      mounted() {
+        fetch('/api/${this.course_id}')
+        .then(res => res.json())
+        .then(result =>{
+         this.questions = result.results
+         console.log(result)})
+
+        }
+    });
+    </script>
+
+
+</body>
+</html>
