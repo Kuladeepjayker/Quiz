@@ -5,7 +5,7 @@
 ## Requirements :
               Framework : Django-3.0.6
               Tech-Lang : Python-3.8
- 
+ ## Setup
 --> First install virtual environment : pip install virtualenvwrapper-win
 --> Create a virtual environment : Mkvirtualen [Name]
 
