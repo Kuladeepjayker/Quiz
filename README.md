@@ -5,7 +5,7 @@
 ## Requirements :
               Framework : Django-3.0.6
               Tech-Lang : Python-3.8
- ## Setup
+ ## Setup :
   First install virtual environment : pip install virtualenvwrapper-win
   Create a virtual environment : Mkvirtualen [Name]
 
@@ -16,7 +16,7 @@
   To view version of the framework use command : django-admin --version
   Next make directory : mkdir [name]
   Next make directory : mkdir [name]
---> Change directory : cd [name]
+  Change directory : cd [name]
 --> Later, we've to create project env : django-admin startproject [name]
 --> Next, run the project by this command : python manage.py runserver
 --> It shows the link click on it and now you'r able to see the django page by local server
